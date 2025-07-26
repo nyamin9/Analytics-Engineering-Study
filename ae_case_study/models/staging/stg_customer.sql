@@ -10,4 +10,7 @@ FROM `dl_northwind.customer`
 WITH source AS (
     SELECT * FROM {{ source('northwind', 'customer') }}
 )
-SELECT * FROM source
+SELECT 
+    *,
+    CURRENT_TIMESTAMP() AS insertion_timestamp
+FROM source
