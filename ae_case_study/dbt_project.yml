@@ -37,8 +37,8 @@ models:
     # https://docs.google.com/spreadsheets/d/1wpLf34IVlvOJdg40jf2559FIzyieShdD3JwOM5hUjIg/edit?gid=1624630520#gid=1624630520
     staging:      # staging 디렉토리 내 모든 모델에 적용되는 설정
       +enabled: true           # 모델 활성화 여부: false로 설정하면 해당 모델들이 실행되지 않음
-      # +materialized: table     # 모델 형식: view, table, incremental 중 선택
-      +materialized: view     # 모델 형식: view, table, incremental 중 선택
+      +materialized: table     # 모델 형식: view, table, incremental 중 선택
+      # +materialized: view     # 모델 형식: view, table, incremental 중 선택
                                # - view: 가벼운 쿼리, 자주 변경되는 경우
                                # - table: 무거운 쿼리, 성능이 중요한 경우  
                                # - incremental: 대용량 데이터, 증분 처리 필요한 경우
