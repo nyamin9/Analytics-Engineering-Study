@@ -35,7 +35,7 @@ models:
   ae_case_study:  # 프로젝트 이름과 동일해야 함
     # Config indicated by + and applies to all files under models/example/
     # https://docs.google.com/spreadsheets/d/1wpLf34IVlvOJdg40jf2559FIzyieShdD3JwOM5hUjIg/edit?gid=1624630520#gid=1624630520
-    staging:      # staging 디렉토리 내 모든 모델에 적용되는 설정
+    staging:      # staging 디렉토리 내 모든 모델에 적용되는 설정 (폴더 구조와 동일명)
       +enabled: true           # 모델 활성화 여부: false로 설정하면 해당 모델들이 실행되지 않음
       +materialized: table     # 모델 형식: view, table, incremental 중 선택
       # +materialized: view     # 모델 형식: view, table, incremental 중 선택
@@ -44,3 +44,10 @@ models:
                                # - incremental: 대용량 데이터, 증분 처리 필요한 경우
       +schema: stg_northwind   # 모델 스키마: 데이터베이스에서 생성될 스키마 이름
                                # 데이터 웨어하우스의 논리적 구분을 위해 사용
+    warehouse:      # warehouse 디렉토리 내 모든 모델에 적용되는 설정 (폴더 구조와 동일명)
+      +enabled: true           # 모델 활성화 여부: false로 설정하면 해당 모델들이 실행되지 않음
+      +materialized: table     # 모델 형식: view, table, incremental 중 선택
+      +schema: dwh_northwind   # 모델 스키마: 데이터베이스에서 생성될 스키마 이름
+                               # 데이터 웨어하우스의 논리적 구분을 위해 사용
+      dim_date:
+        +materialized: view    # dim_date 모델은 view로 설정
