@@ -1,1 +1,5 @@
-# Analytics-Engineering-Study
+# Analytics-Engineering-Study  
+
+DA에서 AE로 역할을 확장하며 필요성을 느꼈던 부분을 채우고자, 지속적으로 공부해나갈 예정입니다.
+본 레포는 공부 내용이 휘발되지 않도록 학습 과정을 기록한 레포입니다.
+AE 관련 학습 내용은 지속적으로 추가할 예정입니다!
