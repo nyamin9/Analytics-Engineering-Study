@@ -51,3 +51,8 @@ models:
                                # 데이터 웨어하우스의 논리적 구분을 위해 사용
       dim_date:
         +materialized: view    # dim_date 모델은 view로 설정
+    analytics_obt:
+      +enabled: true           # 모델 활성화 여부: false로 설정하면 해당 모델들이 실행되지 않음
+      +materialized: table     # 모델 형식: view, table, incremental 중 선택
+      +schema: obt_northwind   # 모델 스키마: 데이터베이스에서 생성될 스키마 이름
+                               # 데이터 웨어하우스의 논리적 구분을 위해 사용
